@@ -1,16 +1,18 @@
 import React from "react";
 import "./App.css";
-import ListOfGifs from "./components/ListOfGifs";
+import Home from './pages/Home/'
+import Detail from './pages/Detail'
+import SearchResults from './pages/SearchResults'
 import { Link, Route } from "wouter";
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <section className="App-content">
-        <h1>Giffy</h1>
+      <section className="App-content">         
         <Link to="/">
-          <img className="App-logo" alt='Giffy logo' src='/logo.png'/>          
-        </Link>
+          <img className="App-logo" alt='Giffy logo' src='/logo512.png'/>          
+        </Link>        
         <Route
           component={Home}
           path='/'
@@ -28,4 +30,3 @@ function App() {
   );
 }
 
-export default App;
