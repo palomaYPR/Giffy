@@ -1,7 +1,7 @@
 const apiKey = 'AeWSbEwd8j0fLcCvVM3oKtJYs6vao6oK'
 
 export default function getGifts({keyword = 'morty'} = {}) {
-    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=10&offset=0&rating=g&lang=en`  
+    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=20&offset=0&rating=g&lang=en`  
     return fetch(apiURL)
     .then(res => res.json())
     .then(response => {
