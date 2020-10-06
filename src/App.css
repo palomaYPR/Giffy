@@ -11,7 +11,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 16px;
+  padding: 16px;  
 }
 
 .App-logo {
@@ -27,10 +27,12 @@
 
 .App-title {
   color: var(--theme-body-txt);
-  margin-top: 0.6rem;
+  margin-top: 0.6rem;    
 }
 
 a{
   color: #09f;
   font-size: 32px;
 }
+
+/* ----------------- */

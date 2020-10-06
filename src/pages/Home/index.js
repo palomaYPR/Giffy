@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { Link, useLocation } from 'wouter'
-import getGifs from '../../services/getGifs'
 import ListOfGifs from '../../components/ListOfGifs/index'
 import { useGifs } from '../../hooks/useGifs'
 
@@ -25,6 +24,7 @@ export default function Home() {
         <React.Fragment>
             <form onSubmit={handleSubmit}>
                 <input placeholder="Search a gif here..." onChange={handleChange} type='text' value={keyword}></input>
+                <button>Search</button>
             </form>
             <h3 className="App-title">Última búsqueda</h3>            
             <ListOfGifs gifs={gifs}/>
