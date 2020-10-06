@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Home from './pages/Home'
+import Home from './pages/Home/'
 import Detail from './pages/Detail'
 import SearchResults from './pages/SearchResults'
 import { Link, Route } from "wouter";

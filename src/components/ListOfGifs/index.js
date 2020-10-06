@@ -1,6 +1,6 @@
 import React from 'react';
-import Gif from './Gif'
-import './ListOfGifs/ListOfGifs.css'
+import Gif from '../Gif'
+import './ListOfGifs.css'
 
 export default function ListOfGifs ({ gifs }) {
     return <div className='ListOfGifs'>
