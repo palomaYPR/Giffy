@@ -9,8 +9,11 @@ export default function SearchResults ({ params }) {
         
     return <React.Fragment>
         {loading
-            ? <Spinner />
-            : <ListOfGifs gifs={gifs}/>
+            ? <Spinner />            
+            : <>
+                <h3 className='App-title'>{ keyword }</h3>
+                <ListOfGifs gifs={gifs}/>
+                </>
         }
     </React.Fragment>
 }

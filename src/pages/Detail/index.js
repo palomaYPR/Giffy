@@ -12,6 +12,9 @@ export default function Detail ({ params }) {
     console.log(gif)
 
     //console.log(params.id)
-    return <Gif {...gif} />
+    return <>
+        <h3 className='App-title'>{gif.title}</h3>
+        <Gif {...gif} />
+    </>
     
 }
