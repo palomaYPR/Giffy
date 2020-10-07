@@ -2,13 +2,13 @@ import React, {useState} from 'react'
 import { Link, useLocation } from 'wouter'
 import ListOfGifs from '../../components/ListOfGifs/index'
 import { useGifs } from '../../hooks/useGifs'
+import Category from '../../components/Category'
 
 const POPULAR_GIFS = ['Desencanto', 'Nation Z', 'Castlevania']
 
 export default function Home() {
     const [keyword, setKeyword] = useState('')
     const [path, pushLocation] = useLocation()
-    
     const { loading, gifs } = useGifs()
 
     const handleSubmit = evt => {
@@ -28,14 +28,8 @@ export default function Home() {
             </form>
             <h3 className="App-title">Última búsqueda</h3>            
             <ListOfGifs gifs={gifs}/>
-            <h3 className="App-title">Los Gifs más populares:</h3> 
-            <ul>
-                {POPULAR_GIFS.map((popularGif) => (
-                    <li key={popularGif}>
-                        <Link to={`/search/${popularGif}`}>Gifs de { popularGif }</Link>
-                    </li>
-                ))}
-            </ul>
+            
+            <Category name='Categorías populares' options={POPULAR_GIFS}/>
         </React.Fragment>
     )
 }
