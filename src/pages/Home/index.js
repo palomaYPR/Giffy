@@ -22,12 +22,22 @@ export default function Home() {
 
     return(
         <React.Fragment>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="Search a gif here..." onChange={handleChange} type='text' value={keyword}></input>
+            <form onSubmit={handleSubmit}>                
                 <button>Search</button>
+                <input placeholder="Search a gif here..." onChange={handleChange} type='text' value={keyword}></input>
             </form>
-            <h3 className="App-title">Última búsqueda</h3>            
-            <ListOfGifs gifs={gifs}/>
+            
+            <div className='App-main'>
+                <div className='App-results'>
+                    <h3 className='App-title'>Última búsqueda</h3>
+                    <ListOfGifs gifs={gifs}/>
+                </div>
+                <Category
+                    className='App-category'
+                    name='Categorías populares'
+                    options={POPULAR_GIFS}
+                />
+            </div>
             
             <Category name='Categorías populares' options={POPULAR_GIFS}/>
         </React.Fragment>
