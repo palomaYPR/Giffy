@@ -39,7 +39,7 @@ export default function Home() {
                     />
                     <Category 
                         name='Series'
-                        options={['The Walking Dead', 'La Familia Addams', 'The Seven Deadly Sins Netflix']}
+                        options={['The Walking Dead', 'The Addams Family', 'The Seven Deadly Sins']}
                     />
                 </div>
             </div>
