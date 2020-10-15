@@ -12,8 +12,7 @@
 
 .Category-link {
     color: white;
-    font-size: 1em;
-    padding: .5em;
+    font-size: 1em;    
     transition: color ease-in .1s;
 }
 
@@ -27,8 +26,7 @@
     }
 
     .Category-list li::before {
-        color: #8c55a2;
-        content: '--';
+        color: #8c55a2;        
         margin-right: .5em;
         font-size: 1em;
     }
