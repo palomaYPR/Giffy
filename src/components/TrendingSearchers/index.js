@@ -10,9 +10,8 @@ function TrendingSearches(){
     return <Category name='Tendencias' options={trends} />
 }
 
-export default function LazyTrending () {
-    const [show, setShow] = useState(false)
-    const elementRef = useRef()
+function useNearScreen ( {elementRef} ) {
+    const [isNearScreen, setShow] = useState(false)
 
     useEffect(function (){
         let observer
@@ -38,7 +37,15 @@ export default function LazyTrending () {
 
         return () => observer && observer.disconnect()
     })
+
+    return isNearScreen
+}
+
+export default function LazyTrending () {    
+    const elementRef = useRef()
+    const isNearScreen = useNearScreen({elementRef})
+
     return <div ref={elementRef}>
-        { show ? <TrendingSearches /> : null }
+        { isNearScreen ? <TrendingSearches /> : null }
     </div>
 }
