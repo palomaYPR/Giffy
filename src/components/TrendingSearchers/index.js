@@ -3,10 +3,9 @@ import getTrendingTerms from 'services/getTrendingTermsService'
 import Category from '../Category'
 
 function TrendingSearches(){
-    const [trends, setTrends] = useState(false)
+    const [trends, setTrends] = useState([])
     useEffect(function (){
-        getTrendingTerms()
-        .then(setTrends)
+        getTrendingTerms().then(setTrends)
     }, [])
     return <Category name='Tendencias' options={trends} />
 }
