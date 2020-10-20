@@ -3,28 +3,20 @@ import { useLocation } from 'wouter'
 import ListOfGifs from 'components/ListOfGifs/index'
 import { useGifs } from 'hooks/useGifs'
 import TrendingSearchers from 'components/TrendingSearchers'
+import SearchForm from 'components/SearchForm'
 
-export default function Home() {
-    const [keyword, setKeyword] = useState('')
+export default function Home() {    
     const [path, pushLocation] = useLocation()
-    const { loading, gifs } = useGifs()
+    const { loading, gifs } = useGifs()    
 
-    const handleSubmit = evt => {
-        evt.preventDefault()
+    const handleSubmit = ({keyword}) => {
+        // navegar a otra ruta        
         pushLocation(`/search/${keyword}`)
-    }
-
-    const handleChange = evt => {
-        setKeyword(evt.target.value)
     }
 
     return(
         <React.Fragment>
-            <form onSubmit={handleSubmit}>                
-                <button>Search</button>
-                <input placeholder="Search a gif here..." onChange={handleChange} type='text' value={keyword}></input>
-            </form>
-            
+            <SearchForm onSubmit = { handleSubmit }/>
             <div className='App-main'>
                 <div className='App-results'>
                     <h3 className='App-title'>Última búsqueda</h3>

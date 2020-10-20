@@ -16,7 +16,7 @@ test('search form could be used', async () => {
     const button = await screen.findByRole('button')
 
     fireEvent.change(input, {target: {value : 'Desencanto'}})
-    fireEvent.change(button)
+    fireEvent.click(button)
 
     const title = await screen.findByText('Desencanto')
     expect(title).toBeVisible()
