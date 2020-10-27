@@ -7,5 +7,5 @@ export default function TrendingSearches(){
     useEffect(function (){
         getTrendingTerms().then(setTrends)
     }, [])
-    return <Category name='Tendencias' options={trends} />
+    return <Category name='Trendings' options={trends} />
 }
