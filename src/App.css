@@ -3,7 +3,7 @@
 }
 
 .App-content {
-  background-color: #282c34;
+  background-color: var(--theme-body-bg);
   color: var(--theme-body-txt);
   min-height: 100vh;
   display: flex;
@@ -44,8 +44,16 @@ a{
   align-items: flex-start;
 }
 
+.App-wrapper {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
+
 .App-results {
   flex-shrink: 2;
+  width: 100%;
 }
 
 .App-category {
@@ -53,15 +61,15 @@ a{
   width: 100%;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 55rem) {
   .App-main {
     flex-direction: initial;
   }
 
-  .App-category {
-    padding: 0 2em;
+  .App-category {    
     position: sticky;
-    top: 0;
+    top: var(--search-size-mx-h);
     width: 40%;
+    max-width: 300px;
   }
 }
