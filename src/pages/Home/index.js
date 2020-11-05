@@ -16,7 +16,11 @@ export default function Home() {
 
     return(
         <React.Fragment>
+            <header className="o-header">
             <SearchForm onSubmit={ handleSubmitSearchForm }/>
+            </header>
+            
+            <div className="App-wrapper">
             <div className='App-main'>
                 <div className='App-results'>
                     <h3 className='App-title'>Última búsqueda</h3>
@@ -25,7 +29,8 @@ export default function Home() {
                 <div className='App-category'>
                     <TrendingSearchers />
                 </div>
-            </div>                        
+            </div> 
+            </div>                       
         </React.Fragment>
     )
 }

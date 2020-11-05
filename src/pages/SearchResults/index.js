@@ -23,9 +23,13 @@ export default function SearchResults ({ params }) {
         {loading
             ? <Spinner />            
             : <>
-                <h3 className='App-title'>{ decodeURI(keyword) }</h3>
+                <div className="App-wrapper">
+                <h3 className='App-title'>
+                    { decodeURI(keyword) }
+                </h3>
                 <ListOfGifs gifs={gifs}/>
                 <div id='visor' ref={externalRef}></div>
+                </div>
                 </>
         }        
     </React.Fragment>
